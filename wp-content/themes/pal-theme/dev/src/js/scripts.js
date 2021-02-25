@@ -1,5 +1,6 @@
-document.getElementById('play').addEventListener('click', e => {
+document.getElementById('play_vimeo').addEventListener('click', e => {
   e.preventDefault();
   e.target.classList.add('video-btn__hide');
-  document.getElementById('video').muted = false;
+  const player = new Vimeo.Player(document.getElementById('video_vimeo'));
+  player.play();
 });

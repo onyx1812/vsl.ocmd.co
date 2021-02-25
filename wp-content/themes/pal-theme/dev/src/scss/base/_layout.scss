@@ -159,3 +159,8 @@ p{
     }
   }
 }
+
+.main-header, .main-footer{
+  position: relative;
+  z-index: 2;
+}
