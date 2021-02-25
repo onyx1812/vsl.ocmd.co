@@ -139,3 +139,12 @@ function my_deregister_styles_and_scripts() {
     wp_dequeue_style('wp-block-library');
 }
 add_action( 'wp_print_styles', 'my_deregister_styles_and_scripts', 100 );
+
+
+/*remove auto P*/
+function remove_the_wpautop_function() {
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+}
+
+add_action( 'after_setup_theme', 'remove_the_wpautop_function' );

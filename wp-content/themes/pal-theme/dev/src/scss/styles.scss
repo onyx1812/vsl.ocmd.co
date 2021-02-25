@@ -5,9 +5,17 @@
 @import 'partials/main-footer';
 
 .content{
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 30px;
+  padding-bottom: 15px;
   overflow: hidden;
+  @media(min-width:768px){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media(min-width:1200px){
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
   &:before{
     content: "";
     height: 626px;
@@ -18,6 +26,9 @@
     background: url('../img/bg.jpg') no-repeat bottom center/100% auto;
     left: 50%; top: 0;
     transform: translate(-50%, 0);
+    @media(max-width:767px){
+      display: none;
+    }
   }
   .container{
     position: relative;
@@ -31,27 +42,18 @@
 }
 
 h1{
-  font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 126.8%;
   text-align: center;
   color: #000000;
   margin-bottom: 30px;
   @media(min-width:768px){
-    font-size: 38px;
-    margin-bottom: 60px;
+    font-size: 30px;
   }
-}
-
-.babulia{
-  display: block;
-  margin: 0 auto 30px;
-  max-width: 100%;
-  width: 660px;
-  @media(min-width:1921px){
-    width: 860px;
+  @media(min-width:1200px){
+    font-size: 34px;
   }
 }
 
@@ -62,12 +64,76 @@ h1{
   max-width: 100%;
   margin: 0 auto;
   border-radius: 60px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 125.9%;
+  @media(min-width:768px){
+    font-size: 22px;
+  }
+  @media(min-width:1200px){
+    font-size: 24px;
+  }
   @media(min-width:1921px){
     width: 746px;
   }
+}
+
+.video{
+  position: relative;
+  margin-bottom: 30px;
+  &-btn{
+    padding: 10px;
+    border: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%; top: 50%;
+    z-index: 2;
+    color: #fff;
+    fill: #fff;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: 1s linear 0s infinite alternate scale;
+    background: rgba(254, 111, 97, .4);
+    @media(min-width:768px){
+      width: 150px;
+      height: 150px;
+      padding: 30px;
+    }
+    @media(min-width:1200px){
+      width: 200px;
+      height: 200px;
+    }
+    &:hover{
+      transition: transform 1s ease;
+      opacity: .7;
+      animation: none;
+    }
+    &__hide{
+      display: none;
+      animation: none;
+      visibility: hidden;
+      z-index: 0;
+    }
+    img{
+      display: block;
+      pointer-events: none;
+    }
+  }
+  &-player{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@keyframes scale {
+  0%  { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
 }

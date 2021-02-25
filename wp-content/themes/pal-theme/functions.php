@@ -30,6 +30,7 @@ function front_scripts() {
     wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles-404.css');
   } else {
     wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles.css');
+    wp_enqueue_script( 'scripts', ROOT . '/js/scripts.js', false, false, 'in_footer');
   }
 }
 add_action( 'wp_enqueue_scripts', 'front_scripts' );
@@ -37,3 +38,11 @@ add_action( 'wp_enqueue_scripts', 'front_scripts' );
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
 }
+
+function redirect_from_home() {
+  if( is_front_page() ){
+    wp_redirect('https://ocmd.co');
+    exit();
+  }
+}
+add_action('template_redirect', 'redirect_from_home');
