@@ -1318,6 +1318,9 @@ h1 {
       vertical-align: middle;
       -webkit-box-pack: center;
               justify-content: center; } }
+  @media (min-width: 1200px) {
+    .info-right {
+      padding-left: 100px; } }
   .info-title {
     font-family: Montserrat;
     font-weight: 500;
@@ -1344,6 +1347,9 @@ h1 {
         line-height: 21px;
         padding-right: 30px;
         margin-bottom: 0; } }
+    @media (min-width: 1200px) {
+      .info-desc {
+        padding-right: 190px; } }
   .info-slogan {
     font-family: Montserrat;
     font-weight: 500;

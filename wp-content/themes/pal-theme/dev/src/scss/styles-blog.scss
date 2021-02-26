@@ -90,6 +90,9 @@ h1{
       vertical-align: middle;
       justify-content: center;
     }
+    @media(min-width:1200px){
+     padding-left: 100px;
+    }
   }
   &-title{
     font-family: Montserrat;
@@ -116,6 +119,9 @@ h1{
       line-height: 21px;
       padding-right: 30px;
       margin-bottom: 0;
+    }
+    @media(min-width:1200px){
+      padding-right: 190px;
     }
   }
   &-slogan{
