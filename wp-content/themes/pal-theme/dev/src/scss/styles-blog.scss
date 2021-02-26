@@ -130,3 +130,21 @@ h1{
     }
   }
 }
+
+.btn-video{
+  display: block;
+  margin: 60px auto 30px;
+  width: 300px;
+  background: url('../img/btn-icon.png') no-repeat 15px center, linear-gradient(180deg, #FFCF81 0%, #FF9D00 100%);
+  padding: 21px 0 21px 75px;
+  border-radius: 8px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  transition: .3s ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+}

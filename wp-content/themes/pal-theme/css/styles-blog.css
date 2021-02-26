@@ -1355,3 +1355,22 @@ h1 {
     @media (min-width: 768px) {
       .info-slogan {
         font-size: 24px; } }
+
+.btn-video {
+  display: block;
+  margin: 60px auto 30px;
+  width: 300px;
+  background: url("../img/btn-icon.png") no-repeat 15px center, -webkit-gradient(linear, left top, left bottom, from(#FFCF81), to(#FF9D00));
+  background: url("../img/btn-icon.png") no-repeat 15px center, linear-gradient(180deg, #FFCF81 0%, #FF9D00 100%);
+  padding: 21px 0 21px 75px;
+  border-radius: 8px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  .btn-video:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
