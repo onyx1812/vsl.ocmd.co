@@ -1378,3 +1378,9 @@ h1 {
   100% {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1); } }
+
+.vidalytics-video .bmpui-ui-uicontainer {
+  visibility: hidden !important; }
+
+.vidalytics-video__show .bmpui-ui-uicontainer {
+  visibility: visible !important; }

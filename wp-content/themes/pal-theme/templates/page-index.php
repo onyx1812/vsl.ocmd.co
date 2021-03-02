@@ -12,7 +12,7 @@ get_header(); ?>
         <img src="<?php echo IMG; ?>/mute.svg" alt="">
       </button> -->
 
-<div id="vidalytics_embed_<?php the_field('video'); ?>" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+<div class="vidalytics-video" id="vidalytics_embed_<?php the_field('video'); ?>" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
 <script type="text/javascript">
 (function (v, i, d, a, l, y, t, c, s) {
 y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
