@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(()=>{
-    document.querySelector('.vidalytics-video').classList.add('vidalytics-video__show');
+    document.querySelector('.btn').classList.add('btn-show');
   }, 30000);
 });

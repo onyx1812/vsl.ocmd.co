@@ -64,6 +64,9 @@ h1{
   font-weight: bold;
   font-size: 20px;
   line-height: 125.9%;
+  visibility: hidden;
+  transition: .5s ease-in-out;
+  transform: translate(0, 100%) scale(0);
   @media(min-width:768px){
     font-size: 22px;
   }
@@ -73,11 +76,16 @@ h1{
   @media(min-width:1921px){
     width: 746px;
   }
+  &-show{
+    visibility: visible;
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 .video{
   position: relative;
-  margin-bottom: 30px;
+  max-width: 900px;
+  margin: 0 auto 30px;
   &-btn{
     padding: 10px;
     border: none;
@@ -123,7 +131,6 @@ h1{
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    // height: auto;
   }
 }
 
@@ -131,15 +138,4 @@ h1{
   0%  { transform: translate(-50%, -50%) scale(1); }
   50% { transform: translate(-50%, -50%) scale(1.2); }
   100% { transform: translate(-50%, -50%) scale(1); }
-}
-
-.vidalytics-video{
-  .bmpui-ui-uicontainer{
-    visibility: hidden !important;
-  }
-  &__show{
-    .bmpui-ui-uicontainer{
-      visibility: visible !important;
-    }
-  }
 }

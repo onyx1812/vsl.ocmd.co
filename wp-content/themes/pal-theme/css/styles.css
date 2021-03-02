@@ -1293,7 +1293,12 @@ h1 {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 125.9%; }
+  line-height: 125.9%;
+  visibility: hidden;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transform: translate(0, 100%) scale(0);
+          transform: translate(0, 100%) scale(0); }
   @media (min-width: 768px) {
     .btn {
       font-size: 22px; } }
@@ -1303,10 +1308,15 @@ h1 {
   @media (min-width: 1921px) {
     .btn {
       width: 746px; } }
+  .btn-show {
+    visibility: visible;
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1); }
 
 .video {
   position: relative;
-  margin-bottom: 30px; }
+  max-width: 900px;
+  margin: 0 auto 30px; }
   .video-btn {
     padding: 10px;
     border: none;
@@ -1378,9 +1388,3 @@ h1 {
   100% {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1); } }
-
-.vidalytics-video .bmpui-ui-uicontainer {
-  visibility: hidden !important; }
-
-.vidalytics-video__show .bmpui-ui-uicontainer {
-  visibility: visible !important; }
