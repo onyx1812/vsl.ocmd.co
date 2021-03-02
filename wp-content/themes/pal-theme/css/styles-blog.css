@@ -60,9 +60,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 template {
   display: none; }
 
-html, body {
-  overflow-x: hidden; }
-
 body {
   color: #3A3C48;
   line-height: 1.2;

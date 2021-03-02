@@ -7,7 +7,8 @@
 .content{
   padding-top: 30px;
   padding-bottom: 15px;
-  overflow: hidden;
+  // overflow: hidden;
+  // position: relative;
   @media(min-width:768px){
     padding-top: 30px;
     padding-bottom: 30px;
@@ -19,7 +20,7 @@
   &:before{
     content: "";
     height: 626px;
-    width: 1920px;
+    width: 100%;
     display: block;
     position: absolute;
     z-index: 1;
@@ -53,6 +54,9 @@ h1{
 }
 
 .btn{
+  position: sticky;
+  bottom: 10px;
+  box-shadow: 0 0 16px rgba(0,0,0, .2);
   background: #44AF44;
   display: block;
   width: 600px;
@@ -60,13 +64,13 @@ h1{
   margin: 0 auto;
   border-radius: 60px;
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 125.9%;
   visibility: hidden;
   transition: .5s ease-in-out;
   transform: translate(0, 100%) scale(0);
+  z-index: 999;
   @media(min-width:768px){
     font-size: 22px;
   }

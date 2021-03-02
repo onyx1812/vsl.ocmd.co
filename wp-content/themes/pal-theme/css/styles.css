@@ -60,9 +60,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 template {
   display: none; }
 
-html, body {
-  overflow-x: hidden; }
-
 body {
   color: #3A3C48;
   line-height: 1.2;
@@ -1238,8 +1235,7 @@ p {
 
 .content {
   padding-top: 30px;
-  padding-bottom: 15px;
-  overflow: hidden; }
+  padding-bottom: 15px; }
   @media (min-width: 768px) {
     .content {
       padding-top: 30px;
@@ -1251,7 +1247,7 @@ p {
   .content:before {
     content: "";
     height: 626px;
-    width: 1920px;
+    width: 100%;
     display: block;
     position: absolute;
     z-index: 1;
@@ -1283,6 +1279,10 @@ h1 {
       font-size: 34px; } }
 
 .btn {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
   background: #44AF44;
   display: block;
   width: 600px;
@@ -1290,7 +1290,6 @@ h1 {
   margin: 0 auto;
   border-radius: 60px;
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 125.9%;
@@ -1298,7 +1297,8 @@ h1 {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   -webkit-transform: translate(0, 100%) scale(0);
-          transform: translate(0, 100%) scale(0); }
+          transform: translate(0, 100%) scale(0);
+  z-index: 999; }
   @media (min-width: 768px) {
     .btn {
       font-size: 22px; } }
