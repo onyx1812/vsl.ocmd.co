@@ -15,6 +15,8 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico?v=1.00" />
 
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-MVR2TP6"></script>
+
     <script>
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
